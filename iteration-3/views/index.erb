@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <title>Twitter Search</title>
+    <link href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css' rel='stylesheet' />
+  </head>
+  <body class='container'>
+    <table style="width:100%">
+     <thead>
+      <tr>
+        <th>User</th>
+        <th>Tweet</th>
+        <th>Time</th>
+      </tr>
+     </thead>     
+     <tbody>
+      <% @tweets_list.each do |tweet| %>
+        <tr>
+          <td><%= tweet.user.name %></td>
+          <td><%= tweet.text %></td>
+          <td><%= tweet.created_at %></td>
+        </tr>
+      <% end %>
+     </tbody>
+    </table>
+    <br>
+    <center>
+      <a href="/">Back</a>
+    </center>
+  </body>
+</html>
